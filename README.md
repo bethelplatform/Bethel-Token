@@ -16,3 +16,4 @@ PRIVATE_KEY="PRIVATE_KEY"
 npx hardhat compile 
 npx hardhat run --network BethelzkEVM scripts/deploy.js
 npx hardhat blockscout-verify contracts/BETHEL.sol 0x84eA74d481Ee0A5332c457a4d796187F6Ba67fEB
+
