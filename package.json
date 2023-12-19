@@ -1,0 +1,25 @@
+{
+  "name": "bethel-token-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hardhat.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-verify": "^2.0.3",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.19.3"
+  },
+  "dependencies": {
+    "@ericxstone/hardhat-blockscout-verify": "^1.0.2",
+    "@openzeppelin/contracts": "4.9",
+    "dotenv": "^16.3.1",
+    "git": "^0.1.5",
+    "github": "^14.0.0"
+  }
+}
