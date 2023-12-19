@@ -20,23 +20,23 @@ module.exports = {
   networks: {
     BethelzkEVM: {
       url: 'https://rpc-testnet-zkevm.bethel.network',
-      accounts: env.PRIVATE_KEY,
+      accounts: [process.env.PRIVATE_KEY || 'PRIVATE_KEY_REDACTED'],
     }
   },
     blockscoutVerify: {
       blockscoutURL: "https://testnet-zkevm.bethel.network",
       contracts: {
         "BETHEL": {
-          compilerVersion: SOLIDITY_VERSION.env.SOLIDITY_VERSION, // checkout enum SOLIDITY_VERSION
+          compilerVersion: process.env.SOLIDITY_VERSION ? SOLIDITY_VERSION[process.env.SOLIDITY_VERSION] : SOLIDITY_VERSION.SOLIDITY_V_8_23,
           optimization: false,
-          evmVersion: EVM_VERSION.env.EVM_VERSION, // checkout enum EVM_VERSION
+          evmVersion: process.env.EVM_VERSION ? EVM_VERSION[process.env.EVM_VERSION] : EVM_VERSION.EVM_PARIS,
           optimizationRuns: 999999,
         },
       },
     },
   etherscan: {
     apiKey: {
-      BethelzkEVM: env.ETHERSCAN_API_KEY
+      BethelzkEVM: process.env.ETHERSCAN_API_KEY
     },
     customChains: [
       {
